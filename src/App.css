@@ -1,9 +1,50 @@
 body{
-    background: #141414;
-    color: #ffffff;
+    background: #141414 !important;
+    color: #ffffff !important;
 }
+.card, .card-content {
+    position: relative;
+  }
+  
+.card {
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+  }
 
-.movie-reviews > .row {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-}
+  .card-body {
+    height: 50%;
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slightly scale up the card on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add a shadow for depth */
+  }
+  
+  .image-container {
+    position: relative;
+    overflow: hidden; /* Keep the overlay within the container */
+  }
+  
+  .img-fluid {
+    transition: transform 0.3s ease; /* Smooth transition for the image */
+  }
+  
+  .image-container:hover .img-fluid {
+    transform: scale(1.1); /* Scale up the image */
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: white; 
+    text-align: center; 
+  }
+  
+  
+  .image-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+  }
+  
