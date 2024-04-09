@@ -1,8 +1,18 @@
 import React from "react";
 import AddRatings from "./AddRatings";
+import ReviewForm from "./ReviewForm";
 import "../App.css";
 
 const MovieList = (props) => {
+    const handleReviewSubmit = (movieId, review) => {
+        console.log(`Review for movie ${movieId}: ${review}`);
+    }
+
+    const handleRating = (rating) => {
+        console.log(`Rating: ${rating}`);
+        // Additional logic to handle the rating
+    };
+
   return (
     <div className="container-fluid movie-reviews">
       <div className="row">
@@ -26,8 +36,11 @@ const MovieList = (props) => {
                 <p className="card-text">{movie.Year}</p>
               </div>
               <div className="overlay">
-                <AddRatings />
-              </div>
+              <AddRatings onRating={handleRating} />
+
+  <ReviewForm movieId={movie.id} onReviewSubmit={handleReviewSubmit} />
+
+</div>
             </div>
           </div>
         ))}
