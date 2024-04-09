@@ -1,58 +1,53 @@
-body{
-    background: #141414 !important;
-    color: #ffffff !important;
+body {
+  background: #141414 !important;
+  color: #ffffff !important;
 }
-.card, .card-content {
-    position: relative;
-  }
+
+.card, .card-content, .image-container {
+  position: relative;
+}
 
 .card {
-    transition: transform 0.3s ease; /* Smooth transition for scaling */
-  }
+  transition: transform 0.3s ease;
+}
 
-  .card-body {
-    height: 50%;
-  }
+.card-body {
+  height: 50%;
+}
 
-  .card:hover {
-    transform: scale(1.05); /* Slightly scale up the card on hover */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add a shadow for depth */
-  }
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-  .image-container {
-    position: relative;
-    overflow: hidden; /* Keep the overlay within the container */
-  }
+.image-container {
+  overflow: hidden;
+}
 
-  .img-fluid {
-    transition: transform 0.3s ease; /* Smooth transition for the image */
-  }
+.img-fluid {
+  transition: transform 0.3s ease;
+}
 
-  .image-container:hover .img-fluid {
-    transform: scale(1.1); /* Scale up the image */
-  }
+.image-container:hover .img-fluid {
+  transform: scale(1.1);
+}
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 40%;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
-    color: #ffffff; /* For text within the overlay */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.5s ease; /* Smooth transition for the hover effect */
-  }
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 40%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 
-  .card:hover .overlay {
-    opacity: 1; /* Reveals the overlay when the user hovers over the card */
-  }
-
-
-  .image-container:hover .overlay {
-    opacity: 1; /* Show the overlay on hover */
-  }
+.card:hover .overlay, .image-container:hover .overlay {
+  opacity: 1;
+}

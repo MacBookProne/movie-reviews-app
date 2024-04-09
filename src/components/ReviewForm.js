@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ReviewForm = ({ onReviewSubmit }) => {
-  const [review, setReview] = useState('');
+  const [review, setReview] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     onReviewSubmit(review);
-    setReview(''); // Reset the review input after submission
+    setReview(""); // Reset the review input after submission
   };
 
   return (
     <form onSubmit={handleSubmit} className="review-form">
       <div className="mb-3">
-        <label htmlFor="reviewInput" className="form-label">Your Review</label>
+        <label htmlFor="reviewInput" className="form-label">
+          Your Review
+        </label>
         <textarea
           className="form-control"
           id="reviewInput"
@@ -22,7 +24,9 @@ const ReviewForm = ({ onReviewSubmit }) => {
           required
         ></textarea>
       </div>
-      <button type="submit" className="btn btn-primary">Submit Review</button>
+      <button type="submit" className="btn btn-primary">
+        Submit Review
+      </button>
     </form>
   );
 };

@@ -33,21 +33,10 @@ const App = () => {
   }, [searchValue]);
 
   // Define a function to add a movie to the ratings list
-  const addRatingMovie = (movie, rating) => {
-    const newRating = { movie, rating };
-    const newRatingsList = [...ratings, newRating];
-    setRatings(newRatingsList);
+  const addRatingMovie = (movie) => {
+    const newRatings = [...ratings, movie];
+    setRatings(newRatings);
   };
-
-  const updateMovieRating = (movieId, newRating) => {
-    setMovies(movies.map(movie => {
-      if (movie.id === movieId) {
-        return { ...movie, rating: newRating };
-      }
-      return movie;
-    }));
-  };
-
 
   // Render the app
   return (
@@ -73,7 +62,6 @@ const App = () => {
             handleRatingsClick={addRatingMovie}
             ratingComponent={AddRatings}
           />
-          <MovieList movies={movies} handleRatingsClick={updateMovieRating} />
         </div>
       </div>
     </div>
