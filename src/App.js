@@ -12,7 +12,7 @@ const App = () => {
   // Define state variables for movies, ratings, and search value
   const [movies, setMovies] = useState([]);
   const [ratings, setRatings] = useState([]);
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState("Scooby Doo");
 
   // Define a function to fetch movies based on search value
   const getMovieRequest = async (searchValue) => {
@@ -38,7 +38,7 @@ const App = () => {
     setRatings(newRatings);
   };
 
-  // Render the app
+
   return (
     <div className="container-fluid movie-reviews">
       <div className="row d-flex align-items-center mt-4 mb-4">
@@ -68,5 +68,4 @@ const App = () => {
   );
 };
 
-// Export the App component
 export default App;

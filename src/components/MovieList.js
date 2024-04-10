@@ -10,7 +10,6 @@ const MovieList = (props) => {
 
   const handleRating = (rating) => {
     console.log(`Rating: ${rating}`);
-    // Additional logic to handle the rating
   };
 
   return (
@@ -21,7 +20,6 @@ const MovieList = (props) => {
             <div className="card h-100">
               <div className="image-container">
                 {" "}
-                {/* This div wraps the image and overlay */}
                 <img
                   src={movie.Poster}
                   className="card-img-top img-fluid"
