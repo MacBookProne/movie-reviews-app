@@ -2,11 +2,12 @@ import React, { useState } from "react";
 
 const ReviewForm = ({ onReviewSubmit }) => {
   const [review, setReview] = useState("");
-  const [reviews, setReviews] = useState([]); // State to hold submitted reviews
+  // State to hold submitted reviews
+  const [reviews, setReviews] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onReviewSubmit(review); // Assuming you want to keep this for additional side effects
+    onReviewSubmit(review);
     setReviews((prevReviews) => [...prevReviews, review]); // Add the current review to the reviews array
     setReview(""); // Reset the review input after submission
   };

@@ -1,13 +1,16 @@
+//imports
 import React from "react";
 import AddRatings from "./AddRatings";
 import ReviewForm from "./ReviewForm";
 import "../App.css";
 
 const MovieList = (props) => {
+    //handle review submissions
   const handleReviewSubmit = (movieId, review) => {
     console.log(`Review for movie ${movieId}: ${review}`);
   };
 
+  //handle rating submissions
   const handleRating = (rating) => {
     console.log(`Rating: ${rating}`);
   };
